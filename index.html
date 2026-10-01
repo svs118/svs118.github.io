@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Suhana Shyam | Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fa;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+
+    nav {
+      background: #102747;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      background: #102747;
+      color: white;
+      padding: 95px 8% 105px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 780px;
+      font-size: 19px;
+      color: #e2e8f0;
+    }
+
+    /* ---------- GENERAL ---------- */
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: #102747;
+      font-size: 36px;
+      margin-bottom: 35px;
+    }
+
+    /* ---------- ABOUT ---------- */
+
+    .about {
+      background: white;
+    }
+
+    .statement {
+      max-width: 900px;
+      font-size: 22px;
+      line-height: 1.65;
+      color: #334155;
+    }
+
+    /* ---------- SKILLS ---------- */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 17px 20px;
+      font-weight: 600;
+      color: #334155;
+      transition: 0.2s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
+      border-color: #102747;
+    }
+
+    /* ---------- PROJECTS ---------- */
+
+    .projects {
+      background: white;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      min-height: 390px;
+      transition: 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .project-number {
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .project-card h3 {
+      color: #102747;
+      font-size: 22px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: #475569;
+      font-size: 15px;
+      flex-grow: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 22px 0;
+    }
+
+    .tag {
+      background: #e8edf4;
+      color: #334155;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .project-link {
+      display: inline-block;
+      width: fit-content;
+      background: #102747;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .project-link:hover {
+      background: #1e3a5f;
+    }
+
+    .sample-note {
+      color: #64748b;
+      font-size: 13px;
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background: #102747;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 850px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        gap: 14px;
+      }
+
+      .project-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .statement {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">Suhana Shyam</div>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Finance & Accounting</div>
+
+      <h1>Suhana Shyam</h1>
+
+      <p>
+        Rutgers Business School student with experience in risk management
+        and financial analysis.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- PERSONAL STATEMENT -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="section-label">About Me</div>
+      <h2>Personal Statement</h2>
+
+      <p class="statement">
+        Finance and Accounting student at Rutgers Business School with
+        experience in risk management and financial analysis, bringing
+        strong analytical, communication, and critical thinking skills.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-label">Capabilities</div>
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill">Microsoft Excel</div>
+        <div class="skill">Financial Analysis</div>
+        <div class="skill">Data Analysis</div>
+        <div class="skill">Risk Analysis</div>
+        <div class="skill">Process Improvement</div>
+        <div class="skill">Business Communication</div>
+        <div class="skill">Executive Reporting</div>
+        <div class="skill">Presentation Skills</div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+
+      <div class="section-label">Selected Work</div>
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+
+        <!-- BENDER TRUST -->
+        <article class="project-card">
+
+          <div class="project-number">01 / INVESTMENT ANALYSIS</div>
+
+          <h3>Bender Trust Stock Pitch Competition</h3>
+
+          <p>
+            Collaborated with a team of five to research Toll Brothers and
+            develop a buy recommendation. Conducted quantitative and qualitative
+            analysis of the company's financial performance, cash flows, growth
+            prospects, market trends, and competitive positioning, and presented
+            the final investment thesis to a panel of judges.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Financial Analysis</span>
+            <span class="tag">Equity Research</span>
+            <span class="tag">Valuation</span>
+          </div>
+
+          <!--
+            Upload the PDF to the same GitHub repository/folder
+            as this HTML file using the filename below.
+          -->
+          <a
+            class="project-link"
+            href="toll-brothers-stock-pitch.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Stock Pitch →
+          </a>
+
+        </article>
+
+
+        <!-- CYBER BRIEFING -->
+        <article class="project-card">
+
+          <div class="project-number">02 / RISK ANALYSIS</div>
+
+          <h3>Cyber Risk &amp; Liability Executive Briefing</h3>
+
+          <p>
+            Researched cyber liability claims, insurance market trends,
+            emerging AI risks, underwriting standards, and risk mitigation
+            strategies. Synthesized findings from industry webinars into a
+            six-page executive briefing for DRPA's Chief Administrative
+            Officer, highlighting key considerations for managing cyber risks.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Risk Analysis</span>
+            <span class="tag">Research</span>
+            <span class="tag">Executive Reporting</span>
+          </div>
+
+          <p class="sample-note">
+            Professional work sample available upon request.
+          </p>
+
+        </article>
+
+
+        <!-- SOP -->
+        <article class="project-card">
+
+          <div class="project-number">03 / PROCESS IMPROVEMENT</div>
+
+          <h3>Insurance Renewal Process SOP</h3>
+
+          <p>
+            Developed an eight-page Standard Operating Procedure documenting
+            DRPA's annual insurance renewal process to improve consistency,
+            organization, and knowledge transfer. Outlined key departmental
+            contacts, application requirements, tracking procedures, and the
+            process for collecting and submitting information for insurance
+            renewals.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Process Improvement</span>
+            <span class="tag">Documentation</span>
+            <span class="tag">Risk Management</span>
+          </div>
+
+          <p class="sample-note">
+            Professional work sample available upon request.
+          </p>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Suhana Shyam
+  </footer>
+
+</body>
+</html>
