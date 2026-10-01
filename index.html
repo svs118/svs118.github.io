@@ -24,8 +24,7 @@
       line-height: 1.7;
     }
 
-    /* ---------- NAVIGATION ---------- */
-
+    /* NAVIGATION */
     nav {
       background: #102747;
       padding: 18px 8%;
@@ -41,7 +40,6 @@
       color: white;
       font-size: 20px;
       font-weight: 700;
-      letter-spacing: 0.4px;
     }
 
     nav ul {
@@ -61,12 +59,11 @@
       color: white;
     }
 
-    /* ---------- HERO ---------- */
-
+    /* HERO */
     .hero {
       background: #102747;
       color: white;
-      padding: 95px 8% 105px;
+      padding: 85px 8%;
     }
 
     .hero-content {
@@ -74,29 +71,12 @@
       margin: auto;
     }
 
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #cbd5e1;
-      margin-bottom: 14px;
-    }
-
     .hero h1 {
       font-size: clamp(42px, 7vw, 70px);
       line-height: 1.05;
-      margin-bottom: 22px;
     }
 
-    .hero p {
-      max-width: 780px;
-      font-size: 19px;
-      color: #e2e8f0;
-    }
-
-    /* ---------- GENERAL ---------- */
-
+    /* GENERAL */
     section {
       padding: 80px 8%;
     }
@@ -121,8 +101,7 @@
       margin-bottom: 35px;
     }
 
-    /* ---------- ABOUT ---------- */
-
+    /* PERSONAL STATEMENT */
     .about {
       background: white;
     }
@@ -134,8 +113,7 @@
       color: #334155;
     }
 
-    /* ---------- SKILLS ---------- */
-
+    /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -157,8 +135,7 @@
       border-color: #102747;
     }
 
-    /* ---------- PROJECTS ---------- */
-
+    /* PROJECTS */
     .projects {
       background: white;
     }
@@ -176,7 +153,7 @@
       padding: 30px;
       display: flex;
       flex-direction: column;
-      min-height: 390px;
+      min-height: 320px;
       transition: 0.25s ease;
     }
 
@@ -185,19 +162,11 @@
       box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
     }
 
-    .project-number {
-      color: #64748b;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-
     .project-card h3 {
       color: #102747;
       font-size: 22px;
       line-height: 1.3;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .project-card p {
@@ -206,25 +175,10 @@
       flex-grow: 1;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 22px 0;
-    }
-
-    .tag {
-      background: #e8edf4;
-      color: #334155;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
     .project-link {
       display: inline-block;
       width: fit-content;
+      margin-top: 24px;
       background: #102747;
       color: white;
       text-decoration: none;
@@ -239,15 +193,7 @@
       background: #1e3a5f;
     }
 
-    .sample-note {
-      color: #64748b;
-      font-size: 13px;
-      font-style: italic;
-      margin-top: 20px;
-    }
-
-    /* ---------- FOOTER ---------- */
-
+    /* FOOTER */
     footer {
       background: #102747;
       color: #cbd5e1;
@@ -256,8 +202,7 @@
       font-size: 14px;
     }
 
-    /* ---------- MOBILE ---------- */
-
+    /* MOBILE */
     @media (max-width: 850px) {
       .project-grid {
         grid-template-columns: 1fr;
@@ -276,10 +221,6 @@
       nav {
         flex-direction: column;
         gap: 10px;
-      }
-
-      .hero {
-        padding-top: 70px;
       }
 
       section {
@@ -306,21 +247,12 @@
     </ul>
   </nav>
 
-
-  <!-- HERO -->
+  <!-- NAME -->
   <header class="hero">
     <div class="hero-content">
-      <div class="eyebrow">Finance & Accounting</div>
-
       <h1>Suhana Shyam</h1>
-
-      <p>
-        Rutgers Business School student with experience in risk management
-        and financial analysis.
-      </p>
     </div>
   </header>
-
 
   <!-- PERSONAL STATEMENT -->
   <section class="about" id="about">
@@ -338,7 +270,6 @@
     </div>
   </section>
 
-
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
@@ -347,7 +278,6 @@
       <h2>Skills</h2>
 
       <div class="skills-grid">
-
         <div class="skill">Microsoft Excel</div>
         <div class="skill">Financial Analysis</div>
         <div class="skill">Data Analysis</div>
@@ -356,11 +286,10 @@
         <div class="skill">Business Communication</div>
         <div class="skill">Executive Reporting</div>
         <div class="skill">Presentation Skills</div>
-
       </div>
+
     </div>
   </section>
-
 
   <!-- PROJECTS -->
   <section class="projects" id="projects">
@@ -374,8 +303,6 @@
         <!-- BENDER TRUST -->
         <article class="project-card">
 
-          <div class="project-number">01 / INVESTMENT ANALYSIS</div>
-
           <h3>Bender Trust Stock Pitch Competition</h3>
 
           <p>
@@ -386,19 +313,9 @@
             the final investment thesis to a panel of judges.
           </p>
 
-          <div class="tags">
-            <span class="tag">Financial Analysis</span>
-            <span class="tag">Equity Research</span>
-            <span class="tag">Valuation</span>
-          </div>
-
-          <!--
-            Upload the PDF to the same GitHub repository/folder
-            as this HTML file using the filename below.
-          -->
           <a
             class="project-link"
-            href="toll-brothers-stock-pitch.pdf"
+            href="Toll%20Brothers%20Presentation%20%282%29.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -407,11 +324,8 @@
 
         </article>
 
-
         <!-- CYBER BRIEFING -->
         <article class="project-card">
-
-          <div class="project-number">02 / RISK ANALYSIS</div>
 
           <h3>Cyber Risk &amp; Liability Executive Briefing</h3>
 
@@ -423,23 +337,10 @@
             Officer, highlighting key considerations for managing cyber risks.
           </p>
 
-          <div class="tags">
-            <span class="tag">Risk Analysis</span>
-            <span class="tag">Research</span>
-            <span class="tag">Executive Reporting</span>
-          </div>
-
-          <p class="sample-note">
-            Professional work sample available upon request.
-          </p>
-
         </article>
-
 
         <!-- SOP -->
         <article class="project-card">
-
-          <div class="project-number">03 / PROCESS IMPROVEMENT</div>
 
           <h3>Insurance Renewal Process SOP</h3>
 
@@ -452,22 +353,12 @@
             renewals.
           </p>
 
-          <div class="tags">
-            <span class="tag">Process Improvement</span>
-            <span class="tag">Documentation</span>
-            <span class="tag">Risk Management</span>
-          </div>
-
-          <p class="sample-note">
-            Professional work sample available upon request.
-          </p>
-
         </article>
 
       </div>
+
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer>
